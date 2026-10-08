@@ -4,97 +4,18 @@
 
 <br/>
 
-## Executive Overview
+### Selected Projects
 
-**Systems Engineering student and Data Analyst** based in Bogotá, Colombia. My work focuses on building reproducible machine learning pipelines, decoupled mobile architectures with accessibility in mind, and typed backend microservices.
-
-Me enfoco en el desarrollo de software y análisis de datos guiado por rigor metodológico: evaluación empírica con particiones congeladas, pruebas automatizadas y arquitecturas modulares donde cada componente tiene una responsabilidad delimitada.
-
----
-
-## Technical Capabilities
-
-| Domain | Core Competencies | Tooling & Frameworks |
+| Project | Description | Stack |
 | :--- | :--- | :--- |
-| **Applied Machine Learning &amp; Data** | Experimental design, ensemble modeling, ablation studies, probabilistic calibration, leakage auditing. | `Python`, `TensorFlow / Keras`, `scikit-learn`, `pandas`, `NumPy`, `Joblib` |
-| **Mobile &amp; Accessibility** | Clean Architecture, decoupled domain services, voice-assisted interfaces, geospatial calculations. | `React Native`, `Expo`, `TypeScript`, `Expo Speech`, `React Navigation` |
-| **Backend &amp; APIs** | RESTful routing, asynchronous execution, typed data contracts, automated integration tests. | `FastAPI`, `Uvicorn`, `HTTPX`, `Starlette TestClient` |
-| **Engineering Discipline** | Test-driven development (TDD), CI workflows, strict type checking, reproducible artifact tracking. | `Pytest`, `Jest`, `Git`, `GitHub Actions`, `Linux / macOS` |
+| 🏦 [**riesgo-crediticio**](https://github.com/suntzz/riesgo-crediticio) | Credit risk predictive modeling & neural ensemble architecture | `Python` `TensorFlow` `Keras` `scikit-learn` |
+| 🚌 [**transmiguia**](https://github.com/suntzz/transmiguia) | Voice-assisted accessible urban navigation mobile app | `React Native` `Expo` `TypeScript` |
+| 🏢 [**smartbuilding-api**](https://github.com/suntzz/smartbuilding-api) | Property administration REST microservice | `FastAPI` `Python` `pytest` |
+| 📊 [**gestor_calificaciones**](https://github.com/suntzz/gestor_calificaciones) | Academic evaluation, metrics & validation module | `Python` `pytest` |
 
----
+<br/>
 
-## Selected Engineering Cases
-
-### 01 / Deep Neural Ensemble for Credit Risk Evaluation
-**Repository:** [`suntzz/riesgo-crediticio`](https://github.com/suntzz/riesgo-crediticio)  
-**Scope:** Machine Learning • Supervised Classification • Empirical Model Selection
-
-An end-to-end predictive modeling system designed to classify financial credit risk under severe asymmetry between false approvals (default risk) and false rejections (commercial opportunity cost).
-
-* **Dataset & Partitioning:** 49,650 verified financial observations processed into 44 features. Partitioned with frozen stratified splits (70% Train: 34,755 | 15% Validation: 7,447 | 15% Test: 7,448).
-* **Experimental Rigor:** Conducted 74 structured experiments across 3 phases (baseline optimization, $L_2$ regularization, multi-seed exploration, and diverse architectural ensembles).
-* **Final Evaluated Architecture (`Ensemble_Top3_Diverso`):** Heterogeneous linear combination of three Keras networks ($12,995$ total trainable parameters):
-  * Model 1: Dense [64, 32, 16] (ReLU, Dropout 0.15)
-  * Model 2: Dense [32, 16] (LeakyReLU $\alpha=0.1$, Dropout 0.15)
-  * Model 3: Dense [64, 32, 16] (ReLU, Dropout 0.20, seed 2026)
-* **Validation Set Performance (7,447 observations):**
-  * ROC-AUC: `0.75382` | PR-AUC: `0.74907` | Log Loss: `0.5888` | Brier Score: `0.2018` | Accuracy: `69.17%` | F1-Score: `0.6902`.
-* **Frozen Test Set Performance (7,448 observations):**
-  * ROC-AUC: `0.74482` | PR-AUC: `0.73512` | Log Loss: `0.5963` | Brier Score: `0.2050` | Accuracy: `67.48%` | F1-Score: `0.6715`.
-  * Confusion Matrix (threshold = 0.50): True Negatives: $2,550$ | False Positives: $1,174$ | False Negatives: $1,248$ | True Positives: $2,476$.
-* **Methodological Controls (from `reports/auditoria_metodologica_final.md`):**
-  * Feature scaling and encoding pipelines fitted exclusively on the training split prior to model fitting.
-  * Stratified partition frozen in `artifacts/splits.npz` (seed 42).
-  * Final evaluation executed once on the unseen test set without post-hoc threshold tuning.
-
----
-
-### 02 / TransmiGuía — Voice-Assisted Urban Transit Navigation
-**Repository:** [`suntzz/transmiguia`](https://github.com/suntzz/transmiguia)  
-**Scope:** Mobile Architecture • Spatial Computing • Accessibility Engineering
-
-An accessible urban transit navigation assistant engineered for Bogotá's TransMilenio mass transit system. Designed to assist users through multimodal voice synthesis, haptic notifications, and step-by-step contextual guidance.
-
-* **Architecture & Clean Code:** Refactored from a monolithic codebase into a 5-tier Clean Architecture (Domain Models, Domain Rules, Text Matching Core, Geospatial Engine, Application Screens).
-* **Implemented Capabilities:**
-  * Polymorphic Haversine geospatial calculation (`src/core/geo/distance.ts`) for real-time station proximity.
-  * Lexical normalization and fuzzy station matching (`src/core/text/stationMatcher.ts`).
-  * Speech synthesis orchestration (`expo-speech`) and custom tactile alerts (`expo-haptics`).
-  * Automated testing suite: **28 of 28 unit tests passing** with strict TypeScript type-checking (`0 errors, 0 warnings`).
-* **Demonstration Mode (`src/services/demoService.ts`):**
-  * Implements a dedicated simulation engine enabling end-to-end interface and interaction verification across all 6 journey stages (destination select, walking guide, station arrival, boarding, transfers, destination arrival).
-* **Pending Field Validation:**
-  * Operational validation under physical transit conditions and live municipal bus fleet integration remain pending; the system currently runs on local simulation data.
-
----
-
-### 03 / SmartBuilding API — Residential Administration Microservice
-**Repository:** [`suntzz/smartbuilding-api`](https://github.com/suntzz/smartbuilding-api)  
-**Scope:** Backend Engineering • RESTful API Design • Integration Testing
-
-A lightweight, typed REST API prototype built with FastAPI for resident directory querying and property administrative management.
-
-* **Endpoints Implemented:**
-  * `GET /`: Health check and welcome message (`{"message": "Bienvenido a SmartBuilding API"}`).
-  * `GET /residentes`: In-memory listing of registered resident records.
-  * `GET /residentes/{residente_id}`: Parameterized single-record retrieval by primary identifier.
-* **Architecture & Testing:** Asynchronous request handling with Uvicorn and automated test coverage via `pytest` and Starlette `TestClient` (`tests/test_residentes.py`).
-
----
-
-### 04 / Academic Evaluation & Cohort Metrics Engine
-**Repository:** [`suntzz/gestor_calificaciones`](https://github.com/suntzz/gestor_calificaciones)  
-**Scope:** Defensive Programming • Algorithmic Logic • Test-Driven Development
-
-A pure Python module for calculating individual academic summaries and cohort statistics with strict defensive boundaries.
-
-* **Verified Logic:** Score validation within strict range $[0.0, 5.0]$, empty collection guardrails with custom `ValueError` exceptions, student entity mapping, and cohort summary generation.
-* **Deterministic Tie-Breaking:** Explicit collision handling raising exceptions when multiple students share the highest GPA, preventing ambiguous ranking.
-* **Test Suite:** Comprehensive unit test coverage using `pytest` validating boundary conditions, extreme scores, and nominal cohort distributions.
-
----
-
-## Technical Dossier & Activity
+### Activity
 
 <div align="center">
   <picture>
@@ -114,16 +35,10 @@ A pure Python module for calculating individual academic summaries and cohort st
   </picture>
 </div>
 
----
-
-## Contact & Professional Channels
-
-* **Location:** Bogotá, Colombia
-* **Direct Email:** [`solanoivan295@gmail.com`](mailto:solanoivan295@gmail.com)
-* **GitHub:** [`github.com/suntzz`](https://github.com/suntzz)
-
 <br/>
 
+---
+
 <div align="center">
-  <sub>SUNTZZ TECHNICAL DOSSIER // REPRODUCIBLE SYSTEMS // BUILT WITH SYSTEM DISCIPLINE</sub>
+  <sub>BOGOTÁ, COLOMBIA &nbsp;•&nbsp; <a href="mailto:solanoivan295@gmail.com">solanoivan295@gmail.com</a> &nbsp;•&nbsp; <a href="https://github.com/suntzz">github.com/suntzz</a></sub>
 </div>
