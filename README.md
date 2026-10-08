@@ -37,11 +37,15 @@ An end-to-end predictive modeling system designed to classify financial credit r
   * Model 1: Dense [64, 32, 16] (ReLU, Dropout 0.15)
   * Model 2: Dense [32, 16] (LeakyReLU $\alpha=0.1$, Dropout 0.15)
   * Model 3: Dense [64, 32, 16] (ReLU, Dropout 0.20, seed 2026)
-* **Audited Evaluation on Frozen Test Set (7,448 observations):**
-  * **Test ROC-AUC:** `0.74482` (vs. Validation ROC-AUC `0.75382`, demonstrating $-1.19\%$ delta and zero data leakage).
-  * **Test PR-AUC:** `0.73512` | **Test Log Loss:** `0.5963` | **Test Brier Score:** `0.2050`
-  * **Test Accuracy:** `67.48%` | **Test F1-Score:** `0.6715`
-  * **Test Confusion Matrix:** True Negatives: $2,550$ | False Positives: $1,174$ | False Negatives: $1,248$ | True Positives: $2,476$.
+* **Validation Set Performance (7,447 observations):**
+  * ROC-AUC: `0.75382` | PR-AUC: `0.74907` | Log Loss: `0.5888` | Brier Score: `0.2018` | Accuracy: `69.17%` | F1-Score: `0.6902`.
+* **Frozen Test Set Performance (7,448 observations):**
+  * ROC-AUC: `0.74482` | PR-AUC: `0.73512` | Log Loss: `0.5963` | Brier Score: `0.2050` | Accuracy: `67.48%` | F1-Score: `0.6715`.
+  * Confusion Matrix (threshold = 0.50): True Negatives: $2,550$ | False Positives: $1,174$ | False Negatives: $1,248$ | True Positives: $2,476$.
+* **Methodological Controls (from `reports/auditoria_metodologica_final.md`):**
+  * Feature scaling and encoding pipelines fitted exclusively on the training split prior to model fitting.
+  * Stratified partition frozen in `artifacts/splits.npz` (seed 42).
+  * Final evaluation executed once on the unseen test set without post-hoc threshold tuning.
 
 ---
 
@@ -52,12 +56,15 @@ An end-to-end predictive modeling system designed to classify financial credit r
 An accessible urban transit navigation assistant engineered for Bogotá's TransMilenio mass transit system. Designed to assist users through multimodal voice synthesis, haptic notifications, and step-by-step contextual guidance.
 
 * **Architecture & Clean Code:** Refactored from a monolithic codebase into a 5-tier Clean Architecture (Domain Models, Domain Rules, Text Matching Core, Geospatial Engine, Application Screens).
-* **Verified Implementation:**
+* **Implemented Capabilities:**
   * Polymorphic Haversine geospatial calculation (`src/core/geo/distance.ts`) for real-time station proximity.
   * Lexical normalization and fuzzy station matching (`src/core/text/stationMatcher.ts`).
   * Speech synthesis orchestration (`expo-speech`) and custom tactile alerts (`expo-haptics`).
   * Automated testing suite: **28 of 28 unit tests passing** with strict TypeScript type-checking (`0 errors, 0 warnings`).
-* **Operational Scope (Demo Mode):** Implements a dedicated simulation engine (`demoService.ts`) enabling full field verification across the 6 journey stages (destination select, walking guide, station arrival, boarding, transfers, destination arrival) without requiring live municipal fleet telemetry.
+* **Demonstration Mode (`src/services/demoService.ts`):**
+  * Implements a dedicated simulation engine enabling end-to-end interface and interaction verification across all 6 journey stages (destination select, walking guide, station arrival, boarding, transfers, destination arrival).
+* **Pending Field Validation:**
+  * Operational validation under physical transit conditions and live municipal bus fleet integration remain pending; the system currently runs on local simulation data.
 
 ---
 
@@ -68,8 +75,8 @@ An accessible urban transit navigation assistant engineered for Bogotá's TransM
 A lightweight, typed REST API prototype built with FastAPI for resident directory querying and property administrative management.
 
 * **Endpoints Implemented:**
-  * `GET /`: Health check and service entry point.
-  * `GET /residentes`: Full directory listing of registered residents.
+  * `GET /`: Health check and welcome message (`{"message": "Bienvenido a SmartBuilding API"}`).
+  * `GET /residentes`: In-memory listing of registered resident records.
   * `GET /residentes/{residente_id}`: Parameterized single-record retrieval by primary identifier.
 * **Architecture & Testing:** Asynchronous request handling with Uvicorn and automated test coverage via `pytest` and Starlette `TestClient` (`tests/test_residentes.py`).
 
