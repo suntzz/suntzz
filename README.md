@@ -1,128 +1,122 @@
 <div align="center">
-
-<!-- Cyberpunk Twinkling Wave Banner -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=1,11,14,23&height=220&section=header&text=SUNTZZ&fontSize=58&fontAlignY=36&animation=twinkling&desc=SYSTEMS%20%E2%80%A2%20DATA%20%E2%80%A2%20NEURAL%20LABS&descAlignY=62&descFontSize=19" width="100%" alt="SUNTZZ Header" />
-
-<!-- Animated Cyber Typewriter -->
-<a href="https://github.com/suntzz">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=23&duration=2400&pause=1000&color=00F0FF&center=true&vCenter=true&width=620&lines=%3E_suntzz.init(MODE%3D%22OVERCLOCK%22)%3B;%3E_training_neural_ensembles...;%3E_navigating_cities_with_voice_ai...;%3E_architecting_high_throughput_apis...;%3E_status%3A_building_what_others_cant" alt="Terminal Typewriter" />
-</a>
-
-<br/><br/>
-
-<!-- Holographic Arsenal Icons -->
-<a href="https://github.com/suntzz">
-  <img src="https://skillicons.dev/icons?i=py,ts,fastapi,react,tensorflow,sklearn,postgres,docker,linux,git,github,bash,vscode" alt="Tech Arsenal" />
-</a>
-
-<br/><br/>
-
-</div>
-
----
-
-### 🛰️ ACTIVE DEPLOYMENTS & PROTOCOLS
-
-```
-┌───────────────────────┬────────────────────────────────────────┬─────────────────────────────┐
-│ PROJECT               │ ARCHITECTURE & SCOPE                   │ CORE ENGINE                 │
-├───────────────────────┼────────────────────────────────────────┼─────────────────────────────┤
-│ 🚀 transmiguia        │ Contextual Voice Urban Navigation      │ React Native • Expo • TS    │
-│ 🧠 riesgo-crediticio  │ Deep Neural Ensemble & Risk Scoring    │ TensorFlow • Keras • SKLearn│
-│ 🏢 smartbuilding-api  │ IoT & Infrastructure Management REST   │ FastAPI • Python • Async    │
-│ ⚡ gestor_califica... │ Algorithmic Evaluation & Test Matrix   │ Python • Pytest Engine      │
-└───────────────────────┴────────────────────────────────────────┴─────────────────────────────┘
-```
-
-<div align="center">
-  <a href="https://github.com/suntzz/transmiguia">
-    <img src="https://img.shields.io/badge/TRANSMI--GUIA-VOICE_NAVIGATOR-00F0FF?style=for-the-badge&logo=expo&logoColor=black" />
-  </a>
-  <a href="https://github.com/suntzz/riesgo-crediticio">
-    <img src="https://img.shields.io/badge/RIESGO--CREDITICIO-NEURAL_ENSEMBLE-FF0055?style=for-the-badge&logo=tensorflow&logoColor=white" />
-  </a>
-  <a href="https://github.com/suntzz/smartbuilding-api">
-    <img src="https://img.shields.io/badge/SMARTBUILDING--API-FASTAPI_BACKEND-00FF66?style=for-the-badge&logo=fastapi&logoColor=black" />
-  </a>
-  <a href="https://github.com/suntzz/gestor_calificaciones">
-    <img src="https://img.shields.io/badge/GESTOR--NOTAS-TESTED_CORE-7AA2F7?style=for-the-badge&logo=python&logoColor=white" />
-  </a>
+  <img src="assets/brand-header.svg" width="100%" alt="SUNTZZ // Engineering, Data &amp; Systems" />
 </div>
 
 <br/>
 
-<details>
-<summary>⚡ <b>[CLICK TO DECRYPT SECRET SYSTEM LOGS]</b></summary>
-<br/>
+## Executive Overview
 
-```bash
-[SYSTEM DIAGNOSTIC]
-> Access granted: GUEST_SESSION_2026
-> Core status: ALL ENGINES OPERATIONAL
-> Latency: 12ms | Architecture: ARM64 Darwin
-> Philosophy: "Talk is cheap. Show me the architecture."
+**Systems Engineering student and Data Analyst** based in Bogotá, Colombia. My work focuses on building reproducible machine learning pipelines, decoupled mobile architectures with accessibility in mind, and typed backend microservices.
 
-[PRIMARY DIRECTIVES]
-[01] Solve complex data & scale challenges.
-[02] Train neural networks that actually generalize.
-[03] Ship voice & spatial apps that feel like magic.
-```
-
-</details>
+Me enfoco en el desarrollo de software y análisis de datos guiado por rigor metodológico: evaluación empírica con particiones congeladas, pruebas automatizadas y arquitecturas modulares donde cada componente tiene una responsabilidad delimitada.
 
 ---
 
-### 🏙️ 3D ISOMETRIC CONTRIBUTION METROPOLIS
+## Technical Capabilities
+
+| Domain | Core Competencies | Tooling & Frameworks |
+| :--- | :--- | :--- |
+| **Applied Machine Learning &amp; Data** | Experimental design, ensemble modeling, ablation studies, probabilistic calibration, leakage auditing. | `Python`, `TensorFlow / Keras`, `scikit-learn`, `pandas`, `NumPy`, `Joblib` |
+| **Mobile &amp; Accessibility** | Clean Architecture, decoupled domain services, voice-assisted interfaces, geospatial calculations. | `React Native`, `Expo`, `TypeScript`, `Expo Speech`, `React Navigation` |
+| **Backend &amp; APIs** | RESTful routing, asynchronous execution, typed data contracts, automated integration tests. | `FastAPI`, `Uvicorn`, `HTTPX`, `Starlette TestClient` |
+| **Engineering Discipline** | Test-driven development (TDD), CI workflows, strict type checking, reproducible artifact tracking. | `Pytest`, `Jest`, `Git`, `GitHub Actions`, `Linux / macOS` |
+
+---
+
+## Selected Engineering Cases
+
+### 01 / Deep Neural Ensemble for Credit Risk Evaluation
+**Repository:** [`suntzz/riesgo-crediticio`](https://github.com/suntzz/riesgo-crediticio)  
+**Scope:** Machine Learning • Supervised Classification • Empirical Model Selection
+
+An end-to-end predictive modeling system designed to classify financial credit risk under severe asymmetry between false approvals (default risk) and false rejections (commercial opportunity cost).
+
+* **Dataset & Partitioning:** 49,650 verified financial observations processed into 44 features. Partitioned with frozen stratified splits (70% Train: 34,755 | 15% Validation: 7,447 | 15% Test: 7,448).
+* **Experimental Rigor:** Conducted 74 structured experiments across 3 phases (baseline optimization, $L_2$ regularization, multi-seed exploration, and diverse architectural ensembles).
+* **Final Evaluated Architecture (`Ensemble_Top3_Diverso`):** Heterogeneous linear combination of three Keras networks ($12,995$ total trainable parameters):
+  * Model 1: Dense [64, 32, 16] (ReLU, Dropout 0.15)
+  * Model 2: Dense [32, 16] (LeakyReLU $\alpha=0.1$, Dropout 0.15)
+  * Model 3: Dense [64, 32, 16] (ReLU, Dropout 0.20, seed 2026)
+* **Audited Evaluation on Frozen Test Set (7,448 observations):**
+  * **Test ROC-AUC:** `0.74482` (vs. Validation ROC-AUC `0.75382`, demonstrating $-1.19\%$ delta and zero data leakage).
+  * **Test PR-AUC:** `0.73512` | **Test Log Loss:** `0.5963` | **Test Brier Score:** `0.2050`
+  * **Test Accuracy:** `67.48%` | **Test F1-Score:** `0.6715`
+  * **Test Confusion Matrix:** True Negatives: $2,550$ | False Positives: $1,174$ | False Negatives: $1,248$ | True Positives: $2,476$.
+
+---
+
+### 02 / TransmiGuía — Voice-Assisted Urban Transit Navigation
+**Repository:** [`suntzz/transmiguia`](https://github.com/suntzz/transmiguia)  
+**Scope:** Mobile Architecture • Spatial Computing • Accessibility Engineering
+
+An accessible urban transit navigation assistant engineered for Bogotá's TransMilenio mass transit system. Designed to assist users through multimodal voice synthesis, haptic notifications, and step-by-step contextual guidance.
+
+* **Architecture & Clean Code:** Refactored from a monolithic codebase into a 5-tier Clean Architecture (Domain Models, Domain Rules, Text Matching Core, Geospatial Engine, Application Screens).
+* **Verified Implementation:**
+  * Polymorphic Haversine geospatial calculation (`src/core/geo/distance.ts`) for real-time station proximity.
+  * Lexical normalization and fuzzy station matching (`src/core/text/stationMatcher.ts`).
+  * Speech synthesis orchestration (`expo-speech`) and custom tactile alerts (`expo-haptics`).
+  * Automated testing suite: **28 of 28 unit tests passing** with strict TypeScript type-checking (`0 errors, 0 warnings`).
+* **Operational Scope (Demo Mode):** Implements a dedicated simulation engine (`demoService.ts`) enabling full field verification across the 6 journey stages (destination select, walking guide, station arrival, boarding, transfers, destination arrival) without requiring live municipal fleet telemetry.
+
+---
+
+### 03 / SmartBuilding API — Residential Administration Microservice
+**Repository:** [`suntzz/smartbuilding-api`](https://github.com/suntzz/smartbuilding-api)  
+**Scope:** Backend Engineering • RESTful API Design • Integration Testing
+
+A lightweight, typed REST API prototype built with FastAPI for resident directory querying and property administrative management.
+
+* **Endpoints Implemented:**
+  * `GET /`: Health check and service entry point.
+  * `GET /residentes`: Full directory listing of registered residents.
+  * `GET /residentes/{residente_id}`: Parameterized single-record retrieval by primary identifier.
+* **Architecture & Testing:** Asynchronous request handling with Uvicorn and automated test coverage via `pytest` and Starlette `TestClient` (`tests/test_residentes.py`).
+
+---
+
+### 04 / Academic Evaluation & Cohort Metrics Engine
+**Repository:** [`suntzz/gestor_calificaciones`](https://github.com/suntzz/gestor_calificaciones)  
+**Scope:** Defensive Programming • Algorithmic Logic • Test-Driven Development
+
+A pure Python module for calculating individual academic summaries and cohort statistics with strict defensive boundaries.
+
+* **Verified Logic:** Score validation within strict range $[0.0, 5.0]$, empty collection guardrails with custom `ValueError` exceptions, student entity mapping, and cohort summary generation.
+* **Deterministic Tie-Breaking:** Explicit collision handling raising exceptions when multiple students share the highest GPA, preventing ambiguous ranking.
+* **Test Suite:** Comprehensive unit test coverage using `pytest` validating boundary conditions, extreme scores, and nominal cohort distributions.
+
+---
+
+## Technical Dossier & Activity
 
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="profile-3d-contrib/profile-night-rainbow.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="profile-3d-contrib/profile-night-view.svg">
     <source media="(prefers-color-scheme: light)" srcset="profile-3d-contrib/profile-green-animate.svg">
-    <img src="profile-3d-contrib/profile-night-rainbow.svg" width="100%" alt="3D Isometric Commit City" />
+    <img src="profile-3d-contrib/profile-night-view.svg" width="100%" alt="3D Isometric Contribution Skyline" />
   </picture>
 </div>
 
 <br/>
-
-### 🐍 HUNTING COMMITS IN THE MATRIX
 
 <div align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/suntzz/suntzz/output/github-contribution-grid-snake-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/suntzz/suntzz/output/github-contribution-grid-snake.svg">
-    <img alt="GitHub Contribution Snake" src="https://raw.githubusercontent.com/suntzz/suntzz/output/github-contribution-grid-snake-dark.svg" width="100%" />
+    <img alt="Contribution Grid Snake" src="https://raw.githubusercontent.com/suntzz/suntzz/output/github-contribution-grid-snake-dark.svg" width="100%" />
   </picture>
 </div>
 
 ---
 
-### 📡 LIVE TELEMETRY & STREAK RADAR
+## Contact & Professional Channels
+
+* **Location:** Bogotá, Colombia
+* **Direct Email:** [`solanoivan295@gmail.com`](mailto:solanoivan295@gmail.com)
+* **GitHub:** [`github.com/suntzz`](https://github.com/suntzz)
+
+<br/>
 
 <div align="center">
-  <a href="https://github.com/suntzz">
-    <img src="https://github-readme-streak-stats.herokuapp.com/?user=suntzz&theme=radical&hide_border=true&background=0D1117" width="98%" alt="GitHub Streak" />
-  </a>
-
-  <br/><br/>
-
-  <a href="https://github.com/suntzz">
-    <img src="https://github-readme-stats.vercel.app/api?username=suntzz&show_icons=true&theme=radical&hide_border=true&bg_color=0d1117" width="48%" alt="GitHub Stats" />
-  </a>
-  <a href="https://github.com/suntzz">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=suntzz&layout=compact&theme=radical&hide_border=true&bg_color=0d1117" width="48%" alt="Top Languages" />
-  </a>
-</div>
-
----
-
-<div align="center">
-
-<img src="https://komarev.com/ghpvc/?username=suntzz&label=CLEARANCE_ACCESS_LOGS&color=00F0FF&style=for-the-badge" alt="Access Count" />
-
-<br/><br/>
-
-<a href="mailto:solanoivan295@gmail.com">
-  <img src="https://img.shields.io/badge/SECURE_CHANNEL-solanoivan295%40gmail.com-00F0FF?style=for-the-badge&logo=gmail&logoColor=black" alt="Email" />
-</a>
-
+  <sub>SUNTZZ TECHNICAL DOSSIER // REPRODUCIBLE SYSTEMS // BUILT WITH SYSTEM DISCIPLINE</sub>
 </div>

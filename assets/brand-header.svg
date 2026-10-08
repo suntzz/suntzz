@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 220" width="100%" height="auto">
+  <defs>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#151A20" />
+    </pattern>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="900" height="220" fill="#0B0D10" rx="6" />
+  
+  <!-- Subtle Dot Grid Overlay -->
+  <rect width="900" height="220" fill="url(#grid)" opacity="0.6" rx="6" />
+
+  <!-- Outer Border Frame -->
+  <rect x="0.5" y="0.5" width="899" height="219" fill="none" stroke="#1E252E" stroke-width="1" rx="6" />
+
+  <!-- Top Metadata Bar -->
+  <line x1="28" y1="44" x2="872" y2="44" stroke="#1E252E" stroke-width="1" />
+  
+  <circle cx="36" cy="27" r="4" fill="#B7FF5A" />
+  <text x="48" y="31" fill="#9AA4B2" font-family="'JetBrains Mono', 'SF Mono', 'Fira Code', 'Menlo', monospace" font-size="11" font-weight="600" letter-spacing="1.5">TECHNICAL DOSSIER // REPRODUCIBLE SYSTEMS</text>
+  
+  <text x="872" y="31" text-anchor="end" fill="#9AA4B2" font-family="'JetBrains Mono', 'SF Mono', 'Fira Code', 'Menlo', monospace" font-size="11" letter-spacing="1">BOGOTÁ, COLOMBIA</text>
+
+  <!-- Main Identity Lockup (Left) -->
+  <text x="36" y="112" fill="#F3F5F7" font-family="system-ui, -apple-system, 'SF Pro Display', 'Inter', sans-serif" font-size="54" font-weight="900" letter-spacing="3">SUNTZZ<tspan fill="#B7FF5A">.</tspan></text>
+  
+  <text x="38" y="142" fill="#9AA4B2" font-family="'JetBrains Mono', 'SF Mono', 'Fira Code', 'Menlo', monospace" font-size="13" font-weight="600" letter-spacing="3">ENGINEERING  /  DATA  /  SYSTEMS</text>
+  
+  <!-- Bottom Status Tagline -->
+  <text x="38" y="185" fill="#9AA4B2" font-family="'JetBrains Mono', 'SF Mono', 'Fira Code', 'Menlo', monospace" font-size="11" letter-spacing="1.2">DISCIPLINES: <tspan fill="#F3F5F7">APPLIED MACHINE LEARNING</tspan> • <tspan fill="#F3F5F7">MOBILE ARCHITECTURE</tspan> • <tspan fill="#F3F5F7">BACKEND SERVICES</tspan></text>
+
+  <!-- Right Block / Technical Spec Card -->
+  <line x1="560" y1="44" x2="560" y2="200" stroke="#1E252E" stroke-width="1" />
+  
+  <rect x="580" y="64" width="292" height="126" fill="#151A20" stroke="#1E252E" stroke-width="1" rx="4" />
+  
+  <text x="596" y="88" fill="#9AA4B2" font-family="'JetBrains Mono', 'SF Mono', 'Fira Code', 'Menlo', monospace" font-size="10" letter-spacing="1.5">CORE PILLARS</text>
+  
+  <text x="596" y="114" fill="#F3F5F7" font-family="system-ui, -apple-system, 'SF Pro Display', 'Inter', sans-serif" font-size="13" font-weight="600">01 / Rigorous Empirical ML</text>
+  <text x="596" y="132" fill="#9AA4B2" font-family="'JetBrains Mono', 'SF Mono', 'Fira Code', 'Menlo', monospace" font-size="11">Frozen test evaluation &amp; zero leakage</text>
+  
+  <text x="596" y="158" fill="#F3F5F7" font-family="system-ui, -apple-system, 'SF Pro Display', 'Inter', sans-serif" font-size="13" font-weight="600">02 / Clean Mobile &amp; API Architecture</text>
+  <text x="596" y="176" fill="#9AA4B2" font-family="'JetBrains Mono', 'SF Mono', 'Fira Code', 'Menlo', monospace" font-size="11">Decoupled domains, TDD &amp; accessibility</text>
+</svg>
