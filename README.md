@@ -4,14 +4,6 @@
 
 <br/>
 
-### Selected Projects
-
-| Project | Description | Stack |
-| :--- | :--- | :--- |
-| 🏦 [**riesgo-crediticio**](https://github.com/suntzz/riesgo-crediticio) | Credit risk predictive modeling & neural ensemble architecture | `Python` `TensorFlow` `Keras` `scikit-learn` |
-| 🚌 [**transmiguia**](https://github.com/suntzz/transmiguia) | Voice-assisted accessible urban navigation mobile app | `React Native` `Expo` `TypeScript` |
-| 🏢 [**smartbuilding-api**](https://github.com/suntzz/smartbuilding-api) | Property administration REST microservice | `FastAPI` `Python` `pytest` |
-| 📊 [**gestor_calificaciones**](https://github.com/suntzz/gestor_calificaciones) | Academic evaluation, metrics & validation module | `Python` `pytest` |
 
 <br/>
 
